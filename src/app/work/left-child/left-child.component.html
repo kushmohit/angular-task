@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Child A</h2>
+<form [formGroup]="formGrp" class="formClass" >
+    <label for ='name'>Name</label>
+    <input id ='name 'type="text" formControlName="name">
+    <label for ='email'>Email Address</label>
+    <input id='email' type="email" formControlName="email">
+<div class="row m-5">
+    <input type="submit" [disabled]="formGrp.invalid" (click)="onsubmit()" value="Submit">
+</div>
+    
+    
+</form>
+</div>

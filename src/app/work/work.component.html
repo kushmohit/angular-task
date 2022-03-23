@@ -1,0 +1,12 @@
+<div class="box">
+    <h2 class="text-center borderBtm py-2 mb-0">Work</h2>
+    <div class="row">
+    
+  <div class="col-6 leftChild"><app-left-child [data]="data" (messageEvent)="messageEvent($event)" ></app-left-child></div>
+  <div class="col-6"><app-right-child (messageEventright)="messageEventright($event)" [dataarray]="datastore"></app-right-child></div>
+  </div>
+</div>
+ 
+
+
+ 

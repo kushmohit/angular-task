@@ -1,0 +1,9 @@
+.box{
+    border: 1px solid;
+}
+.borderBtm{
+    border-bottom: 1px solid;
+}
+.leftChild{
+    border-right: 1px solid;
+}

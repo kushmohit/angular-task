@@ -1,0 +1,31 @@
+input {
+    width: 100%;
+  }
+  label {
+    padding: 12px 12px 12px 0;
+   
+  }
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  input[type=submit]:disabled {
+    background-color: darkgrey;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  .formClass{
+    border: 1px solid;
+    padding: 30px;
+  }
