@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,OnDestroy} from '@angular/core';
+import { AppserService } from '../appser.service';
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.css']
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent implements OnInit,OnDestroy {
 
   datastore=[];
-  constructor() { }
+  constructor(private serv:AppserService) { }
 
 index=-1;
 data
@@ -35,4 +36,8 @@ this.index=event.index;
 this.data=event.data;
   }
 
+  ngOnDestroy(): void {
+    this.serv.title.emit();
+    this.serv.login.emit('login');
+  }
 }
