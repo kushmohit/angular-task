@@ -1,16 +1,18 @@
-import { TestBed } from '@angular/core/testing';
+import { EventEmitter, Injectable } from '@angular/core';
 
-import { AppserService } from './appser.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class AppserService {
 
-describe('AppserService', () => {
-  let service: AppserService;
+  constructor() { }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(AppserService);
-  });
+  title = new EventEmitter();
+  login = new EventEmitter();
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  setvalue(){
+    this.title.emit('');
+    this.login.emit('login');
+  }
+
+}
