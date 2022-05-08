@@ -1,11 +1,11 @@
 <div class="container" *ngIf="dataarray.length>=1">
-  <h2>Child B</h2>
+  <h2>List Details</h2>
   <table >
   <thead>
       <tr>
           <th>Sno.</th>
-          <th>Name</th>
-          <th>Email Address</th>
+          <th>Task</th>
+          <th>Task Details</th>
           <th>Action</th>
         </tr>
   
@@ -13,8 +13,8 @@
   <tbody>
       <tr *ngFor="let item of dataarray;let x=index">
           <td>{{x+1}}</td>
-          <td>{{item.name}}</td>
-          <td>{{item.email}}</td>
+          <td>{{item.task}}</td>
+          <td>{{item.taskdetails}}</td>
           <td><button class="editbtn" (click)="toedit(x)">edit</button><button class="deletebtn" (click)="todelete(x)">delete</button></td>
         </tr>
   </tbody>

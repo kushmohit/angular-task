@@ -1,1 +1,13 @@
-<h3 class="text-center">about component called !</h3>
+<div class="container">   
+<form [formGroup]="loginpage">  
+   
+        <label>Username : </label>   
+        <input type="text" placeholder="Enter Username" name="username"  formControlName="username">  
+        <label>Password : </label>   
+        <input type="password" placeholder="Enter Password" name="password"   formControlName="password">  
+        <button type="submit"  (click)="submit()" value="Submit">Login</button>   
+       
+   
+</form> 
+<div *ngIf="error">wrong username</div>   
+</div>   

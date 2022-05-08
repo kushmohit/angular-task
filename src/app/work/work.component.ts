@@ -23,16 +23,12 @@ data
       this.datastore.push(msgData);
      }else{
       this.datastore=  this.datastore.map((obj,i)=>{
-         if(i==this.index) {return {name:msgData.name,email:msgData.email}}
+         if(i==this.index) {return {task:msgData.task,taskdetails:msgData.taskdetails}}
           else {return{...obj}}
         })
         
        this.index=-1;
      }
-     
-    
-    
-
   }
   messageEventright(event){
 this.index=event.index;

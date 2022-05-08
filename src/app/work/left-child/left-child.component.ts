@@ -15,27 +15,19 @@ export class LeftChildComponent implements OnInit ,OnChanges{
 
   ngOnInit(): void {
     this.formGrp=this.fb.group({
-      
-      name:['',Validators.required],
-      email:['',[Validators.required,Validators.email]]
-      
+      task:['',Validators.required],
+      taskdetails:['',Validators.required]
     })
-
-
-
   }
   ngOnChanges(): void {
     if(this.data){
       this.formGrp.patchValue({
-        name:this.data.name,
-        email:this.data.email
+        task:this.data.task,
+        taskdetails:this.data.taskdetails
       })
     }
-     
   }
-
   onsubmit(){
-     
     this.messageEvent.emit(this.formGrp.value);
     this.formGrp.reset();
   }
